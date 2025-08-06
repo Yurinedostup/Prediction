@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation.xml"
+    app:startDestination="@id/title_fragment">
+
+    <fragment
+        android:id="@+id/title_fragment"
+        android:name="com.example.prediction.screens.title.title_fragment"
+        android:label="title_fragment"
+        tools:layout="@layout/title_fragment">
+        <action
+            android:id="@+id/action_title_fragment_to_game_fragment"
+            app:destination="@id/game_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/game_fragment"
+        android:name="com.example.prediction.screens.game.game_fragment"
+        android:label="game_fragment"
+        tools:layout="@layout/game_fragment">
+        <action
+            android:id="@+id/action_game_fragment_to_score_fragment"
+            app:destination="@id/score_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/title_fragment">
+            <!--            добавил-->
+            <argument
+                android:name="score"
+                app:argType="integer" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/score_fragment"
+        android:name="com.example.prediction.screens.score.score_fragment"
+        android:label="score_fragment"
+        tools:layout="@layout/score_fragment">
+        <action
+            android:id="@+id/action_score_fragment_to_game_fragment"
+            app:destination="@id/game_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@id/title_fragment"/>
+<!--        Нужно для передачи\обнуления счёта??-->
+<!--        <argument-->
+<!--            android:name="score"-->
+<!--            app:argType="integer" />-->
+    </fragment>
+</navigation>

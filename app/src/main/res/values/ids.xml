@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="game_layout" type="id"></item>
+    <item name="word_is_text" type="id"></item>
+    <item name="word_text" type="id"></item>
+    <item name="timer_text" type="id"></item>
+    <item name="score_text" type="id"></item>
+    <item name="skip_button" type="id"></item>
+    <item name="guideline" type="id"></item>
+    <item name="correct_button" type="id"></item>
+    <item name="action_bar_activity_content" type="id" />
+    <item name="navigation_bar_item_icon_view" type="id" />
+    <item name="navigation_bar_item_labels_group" type="id" />
+    <item name="navigation_bar_item_small_label_view" type="id" />
+    <item name="navigation_bar_item_large_label_view" type="id" />
+</resources>
